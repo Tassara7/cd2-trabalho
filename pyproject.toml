@@ -1,7 +1,7 @@
 [project]
 name = "cd2-trabalho"
 version = "0.1.0"
-description = "Add your description here"
+description = "CD2 — Tema 7: Economia de Apps (iFood)"
 requires-python = ">=3.12"
 dependencies = [
     "ipykernel>=7.2.0",

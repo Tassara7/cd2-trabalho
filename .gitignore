@@ -3,12 +3,11 @@ __pycache__/
 *.pyc
 .venv/
 
-data/raw/
-data/processed/
-notebooks/data/
+./data/raw/
+./data/processed/
 
 # Jupyter checkpoints
-.ipynb_checkpoints/
+./notebooks/.ipynb_checkpoints/
 
 # OS
 .DS_Store

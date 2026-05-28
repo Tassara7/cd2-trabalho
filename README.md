@@ -1,6 +1,6 @@
 # Projeto CD2 — Tema 7: Economia de Apps
 
-Trabalho da disciplina **FACOM32701 **.
+Trabalho da disciplina **FACOM32701**.
 
 O projeto analisa dados de restaurantes cadastrados no iFood para aplicar técnicas de mineração de dados não supervisionada.
 
@@ -20,7 +20,7 @@ O projeto analisa dados de restaurantes cadastrados no iFood para aplicar técni
 
 - **Fonte original:** https://www.kaggle.com/datasets/ricardotachinardi/ifood-restaurants-data
 - **Download direto (OneDrive):** https://1drv.ms/x/c/34622848b5de9075/IQBnjnt8KZcMRLATZg4q4KevAVWpmwsGOXRvhY6X-CBtRts?e=5dbExr&download=1
-- **Tamanho:** ~406 mil restaurantes, 14 atributos
+- **Tamanho:** ~406 mil linhas, 14 atributos
 - **Atributos principais:** categoria culinária, taxa de entrega, tempo de entrega, valor mínimo do pedido, faixa de preço, avaliação e município
 
 > O CSV foi disponibilizado no OneDrive para facilitar o uso no Google Colab sem necessidade de autenticação no Kaggle.
@@ -46,16 +46,33 @@ O projeto analisa dados de restaurantes cadastrados no iFood para aplicar técni
 
 ### Localmente
 
-**Pré-requisitos:** Python 3.12+ e [uv](https://docs.astral.sh/uv/)
+**Pré-requisitos:** Python 3.12+ e um ambiente com `jupyter`/`notebook` instalado
 
+Usando UV (recomendado):
 ```bash
 git clone https://github.com/Tassara7/cd2-trabalho.git
 cd cd2-trabalho
 uv sync
-uv run jupyter notebook notebooks/
+uv run --with notebook jupyter notebook notebooks/
+```
+Usando pip:
+```bash
+git clone https://github.com/Tassara7/cd2-trabalho.git
+cd cd2-trabalho
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+pip install notebook
+python -m notebook notebooks/
 ```
 
-O notebook detecta que `scripts/` já existe e pula o clone automaticamente.
+Ao executar o comando acima, o Jupyter vai abrir um servidor local no navegador.
+Use a pasta `notebooks/` para abrir `pre_processamento.ipynb`.
+
+Para encerrar o servidor, volte ao terminal e pressione `Ctrl+C` duas vezes.
+Se o terminal pedir confirmação, responda com `y` e pressione `Enter`.
+
+Essas instruções não são necessárias se você estiver usando uma IDE compatível com arquivos `.ipynb`, como VS Code, JupyterLab ou PyCharm.
 
 ## Etapas do projeto
 

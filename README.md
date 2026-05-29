@@ -1,8 +1,6 @@
-# Projeto CD2 — Tema 7: Economia de Apps
+# CD2 — Tema 7: Economia de Apps
 
-Trabalho da disciplina **FACOM32701**.
-
-O projeto analisa dados de restaurantes cadastrados no iFood para aplicar técnicas de mineração de dados não supervisionada.
+Trabalho da disciplina FACOM32701. O projeto analisa dados de restaurantes do iFood aplicando técnicas de mineração de dados não supervisionada.
 
 ## Integrantes
 
@@ -16,73 +14,39 @@ O projeto analisa dados de restaurantes cadastrados no iFood para aplicar técni
 
 ## Dataset
 
-**iFood Restaurants Data**
+iFood Restaurants Data — ~406 mil restaurantes cadastrados em fevereiro de 2021, com atributos de categoria, taxas, tempo de entrega, avaliação e município.
 
-- **Fonte original:** https://www.kaggle.com/datasets/ricardotachinardi/ifood-restaurants-data
-- **Download direto (OneDrive):** https://1drv.ms/x/c/34622848b5de9075/IQBnjnt8KZcMRLATZg4q4KevAVWpmwsGOXRvhY6X-CBtRts?e=5dbExr&download=1
-- **Tamanho:** ~406 mil linhas, 14 atributos
-- **Atributos principais:** categoria culinária, taxa de entrega, tempo de entrega, valor mínimo do pedido, faixa de preço, avaliação e município
+- Fonte original: https://www.kaggle.com/datasets/ricardotachinardi/ifood-restaurants-data
+- Download direto (OneDrive): https://1drv.ms/x/c/34622848b5de9075/IQBnjnt8KZcMRLATZg4q4KevAVWpmwsGOXRvhY6X-CBtRts?e=5dbExr&download=1
 
-> O CSV foi disponibilizado no OneDrive para facilitar o uso no Google Colab sem necessidade de autenticação no Kaggle.
+> O CSV está no OneDrive para facilitar o uso no Colab sem precisar autenticar no Kaggle.
 
 ## Como rodar
 
 ### Google Colab (recomendado)
 
-1. Acesse o notebook pelo link direto:  
-   **[Abrir no Colab](https://colab.research.google.com/github/Tassara7/cd2-trabalho/blob/main/notebooks/pre_processamento.ipynb)**  
-   _(ou via **File → Open notebook → GitHub** e cole `Tassara7/cd2-trabalho`)_
+1. Abra o notebook: **[Abrir no Colab](https://colab.research.google.com/github/Tassara7/cd2-trabalho/blob/main/notebooks/pre_processamento.ipynb)**
+2. Clique em Runtime → Run all (`Ctrl+F9`).
 
-2. No menu do Colab, clique em **Runtime → Run all** (ou `Ctrl+F9`).
+A primeira célula clona o repositório e configura o ambiente automaticamente. A segunda baixa o dataset (~351 MB) do OneDrive. Nenhuma configuração manual necessária.
 
-   A primeira célula de código faz automaticamente:
-   - Clona o repositório em `/content/cd2-trabalho`
-   - Muda o diretório de trabalho para a raiz do projeto
-   - Adiciona o projeto ao `sys.path` para que `scripts/utils.py` seja importável
+### Local
 
-3. A célula seguinte baixa o dataset (~351 MB) do OneDrive automaticamente.
+Requer Python 3.12+ e [uv](https://docs.astral.sh/uv/).
 
-> Nenhuma configuração manual é necessária — basta abrir e executar tudo.
-
-### Localmente
-
-**Pré-requisitos:** Python 3.12+ e um ambiente com `jupyter`/`notebook` instalado
-
-Usando UV (recomendado):
 ```bash
 git clone https://github.com/Tassara7/cd2-trabalho.git
 cd cd2-trabalho
 uv sync
-uv run --with notebook jupyter notebook notebooks/
-```
-Usando pip:
-```bash
-git clone https://github.com/Tassara7/cd2-trabalho.git
-cd cd2-trabalho
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-pip install notebook
-python -m notebook notebooks/
+uv run jupyter notebook notebooks/
 ```
 
-Ao executar o comando acima, o Jupyter vai abrir um servidor local no navegador.
-Use a pasta `notebooks/` para abrir `pre_processamento.ipynb`.
-
-Para encerrar o servidor, volte ao terminal e pressione `Ctrl+C` duas vezes.
-Se o terminal pedir confirmação, responda com `y` e pressione `Enter`.
-
-Essas instruções não são necessárias se você estiver usando uma IDE compatível com arquivos `.ipynb`, como VS Code, JupyterLab ou PyCharm.
-
-## Etapas do projeto
+## Etapas
 
 | Etapa | Notebook | Conteúdo |
 |---|---|---|
-| **Etapa 1** | `notebooks/pre_processamento.ipynb` | Coleta, limpeza e pré-processamento |
+| Etapa 1 | `notebooks/pre_processamento.ipynb` | Coleta, limpeza e pré-processamento |
 
 ## Tecnologias
 
-- **pandas** e **numpy** — manipulação e análise de dados
-- **matplotlib** e **seaborn** — visualizações
-- **scikit-learn** — pré-processamento e algoritmos de ML
-- **scipy** — métricas de distância
+pandas, numpy, matplotlib, seaborn, scikit-learn, scipy

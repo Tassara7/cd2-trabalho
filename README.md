@@ -25,7 +25,9 @@ iFood Restaurants Data — ~406 mil restaurantes cadastrados em fevereiro de 202
 
 ### Google Colab (recomendado)
 
-1. Abra o notebook: **[Abrir no Colab](https://colab.research.google.com/github/Tassara7/cd2-trabalho/blob/main/notebooks/pre_processamento.ipynb)**
+1. Abra o notebook desejado:
+   - Etapa 1: **[Abrir no Colab](https://colab.research.google.com/github/Tassara7/cd2-trabalho/blob/main/notebooks/pre_processamento.ipynb)**
+   - Etapa 2: **[Abrir no Colab](https://colab.research.google.com/github/Tassara7/cd2-trabalho/blob/main/notebooks/analise_exploratoria.ipynb)**
 2. Clique em Runtime → Run all (`Ctrl+F9`).
 
 A primeira célula clona o repositório e configura o ambiente automaticamente. A segunda baixa o dataset (~351 MB) do OneDrive. Nenhuma configuração manual necessária.
@@ -46,6 +48,7 @@ uv run jupyter notebook notebooks/
 | Etapa | Notebook | Conteúdo |
 |---|---|---|
 | Etapa 1 | `notebooks/pre_processamento.ipynb` | Coleta, limpeza e pré-processamento |
+| Etapa 2 | `notebooks/analise_exploratoria.ipynb` | Análise exploratória (EDA) |
 
 ## Tecnologias
 
